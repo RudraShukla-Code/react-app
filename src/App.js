@@ -2,7 +2,7 @@
 import './App.css';
 import Navbar from './components/Navbar';
 import Textform from './components/Textform';
-import About from './components/About';
+// import About from './components/About';
 import React, { useState } from 'react'
 import Alert from './components/Alert';
 // import {
@@ -59,9 +59,9 @@ function App() {
       <Alert alert={alert} />
       <div className="container my-3">
         <Textform show={Setmsg} heading="Enter your text" mode={mode} />
-        <About />
+        {/* <About /> */}
       </div>
-      
+
       {/* <Router>
         <Navbar title="TextUtils" mode={mode} aboutText="About Utils" togglemode={togglemode} />
         <Alert alert={alert} />

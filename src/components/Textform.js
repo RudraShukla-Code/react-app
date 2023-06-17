@@ -16,6 +16,7 @@ export default function Textform(props) {
         //console.log("You click Click on convert button " + text)
         let textvalue = text.toLowerCase()
         settext(textvalue)
+        props.show("Lowercase converted","Success")
     }
 
     const inversecase = () => {
@@ -29,6 +30,7 @@ export default function Textform(props) {
         // join all elements of the array into a string
         const joinArray = reverseArray.join("");
         settext(joinArray)
+        props.show("Inversecase converted","Success")
     }
 
     // copy item
@@ -38,17 +40,19 @@ export default function Textform(props) {
         var text = document.getElementById("mybox");
         text.select();
         navigator.clipboard.writeText(text.value)
+        props.show("Copy Sucessfully","Success")
     }
 
     const handelextraspces = () =>
     {
         let newText = text.split(/[ ]+/);
         settext(newText.join(" "))
+        props.show("Handle Extra Space","Success")
     }
 
     const valuehandel = (event) => {
         //console.log("on change")
-
+        // Change Text Area
         settext(event.target.value)
     }
 
